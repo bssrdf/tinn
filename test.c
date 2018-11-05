@@ -147,7 +147,7 @@ int main()
     // Input and output size is harded coded here as machine learning
     // repositories usually don't include the input and output size in the data itself.
     const int nips = 256;
-    const int nops = 10;
+    const int nops = 10;	
     // Hyper Parameters.
     // Learning rate is annealed and thus not constant.
     // It can be fine tuned along with the number of hidden layers.
@@ -192,7 +192,7 @@ int main()
     // Prints target.
     xtprint(tg, data.nops);
     // Prints prediction.
-    xtprint(pd, data.nops);
+    xtprint(pd, data.nops);	
     // All done. Let's clean up.
     xtfree(loaded);
     dfree(data);
