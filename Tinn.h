@@ -13,6 +13,7 @@ typedef struct
     // Output layer.
     float* o;
     // Number of biases - always two - Tinn only supports a single hidden layer.
+	// equivalent to having a bias node in input layer and the other one in hidden layer
     int nb;
     // Number of weights.
     int nw;

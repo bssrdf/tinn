@@ -33,6 +33,14 @@ static float act(const float a)
 }
 
 // Returns partial derivative of activation function.
+// Here is a trick: pdact is only called with parameter of Tinn.h or 
+// Tinn.o, both of which are results of activiation functions
+// so pdact returns act*(1-act), i.e., the derivative of the sigmoid 
+// function. This is maybe due to tinn does not store the so-called
+// weighted input to neurons (see
+// http://neuralnetworksanddeeplearning.com/chap2.html for another way of
+// implementation)
+
 static float pdact(const float a)
 {
     return a * (1.0f - a);
